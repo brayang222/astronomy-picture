@@ -7,11 +7,16 @@ fetch(url)
     const photoContainer = document.getElementById('photoContainer');
     const img = document.createElement('img');
     const input = document.createElement('input');
+    const expli = document.createElement('h3')
+
 
     input.type = 'date';
     img.src = data.url;
+    expli.textContent = data.explanation;
     photoContainer.appendChild(img);
     photoContainer.appendChild(input);
+    photoContainer.appendChild(expli);
+
 
     input.addEventListener('change', function() {
         const selectedDate = this.value;
