@@ -80,7 +80,7 @@ fetch(urlNasa)
       .then((data) => {
        expli.textContent = data.data.translatedText;
       });
-      
+
       en === true
       ? btn.innerHTML = '<i class="fa-solid fa-repeat"></i><h2>en</h2>'
       : btn.innerHTML = '<i class="fa-solid fa-repeat"></i><h2>es</h2>';
@@ -180,3 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
   }
 });
+
+// ---------------------- Comets -------------------------------------
+

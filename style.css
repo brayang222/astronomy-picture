@@ -46,6 +46,29 @@ body {
   filter: blur(.3px);
 }
 
+.cometa {
+  position: absolute;
+  top: 10%;
+  left: -100px; /* Comienza fuera del lado izquierdo de la pantalla */
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Color inicial del cometa */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff; /* Estela inicial del cometa */
+  animation: cometaAnim 3s linear infinite;
+}
+
+@keyframes cometaAnim {
+  0% {
+    transform: translateX(0);
+    opacity: 1; /* Opacidad inicial de la estela */
+  }
+  100% {
+    transform: translateX(100vw); /* Desplaza el cometa hasta el lado derecho de la pantalla */
+    opacity: 0; /* Estela desaparece al final del recorrido */
+  }
+}
+
 #photoContainer img {
   margin: 100px 0 0 0;
   max-width: 50%;
@@ -138,4 +161,25 @@ body::before { /* Pseudoelemento para crear el efecto de estrellas */
     margin-bottom: 50px;
   }
 
+}
+
+.portfolio {
+  margin: 0 auto;
+  max-width: 200px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  font-size:24px;
+
+}
+
+.portfolio a {
+  color: white;
+  text-decoration: none;
+}
+
+.portfolio a:hover {
+  color: gray;
 }
