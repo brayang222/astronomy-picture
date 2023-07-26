@@ -9,6 +9,7 @@ body {
   position: relative; /* Agrega position: relative al cuerpo de la página */
   background-color: #000;
   z-index: 1;
+  overflow-x: hidden !important;
 }
 
 #photoContainer {
@@ -16,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 90%;
+  max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
   gap: 40px;
@@ -46,18 +47,51 @@ body {
 }
 
 #photoContainer img {
+  margin: 100px 0 0 0;
   max-width: 50%;
   max-height: 500px;
   z-index: 10;
+}
+
+.btn {
+  width: 75px;
+  padding: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  box-shadow: 1px 1px 5px whitesmoke;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn i {
+  font-size: 17px;
+}
+
+h3 {
+  inline-size: min(75ch, 100% - 4rem);
+  color: #666666;
+  margin-bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.724);
+  line-height: 1.4;
 }
 
 input {
   font-size: 40px;
   min-height: 40px;
   z-index: 10;
-  background-color: #333;
+  background-color: transparent;
   color: white;
   border: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%); /* Cambia el color del ícono ajustando la cantidad de inversión */
 }
 
 body::before { /* Pseudoelemento para crear el efecto de estrellas */
@@ -84,4 +118,20 @@ body::before { /* Pseudoelemento para crear el efecto de estrellas */
   50% { opacity: 1; }
   70% { opacity: .7; }
   100% { opacity: 0; }
+}
+
+@media (max-width: 876px) {
+  #photoContainer img {
+    max-width: 70%;
+    margin: 30px 0 0 0;
+  }
+  input {
+  font-size: 25px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 0 30px;
+    margin-bottom: 50px;
+  }
+
 }
