@@ -91,9 +91,6 @@ input {
   cursor: pointer;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(100%); /* Cambia el color del ícono ajustando la cantidad de inversión */
-}
 
 body::before { /* Pseudoelemento para crear el efecto de estrellas */
   position: absolute;
