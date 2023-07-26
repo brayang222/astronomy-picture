@@ -58,6 +58,9 @@ fetch(urlNasa)
   btn.addEventListener("click", () => {
     en = !en;
 
+    const sourceLanguage = en ? 'en' : 'es';
+    const targetLanguage = en ? 'es' : 'en';
+
     const url = 'https://text-translator2.p.rapidapi.com/translate';
     const options = {
 	    method: 'POST',
@@ -67,17 +70,18 @@ fetch(urlNasa)
 		    'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
 	    },
 	    body: new URLSearchParams({
-		    source_language: 'en',
-	  	  target_language: 'es',
+		    source_language: sourceLanguage,
+	  	  target_language: targetLanguage,
 		    text: data.explanation
   	  })
     };
     fetch(url, options)
       .then((resp) => resp.json())
       .then((data) => {
-        expli.textContent = data.data.translatedText;
+       expli.textContent = data.data.translatedText;
       });
-    en === true
+      
+      en === true
       ? btn.innerHTML = '<i class="fa-solid fa-repeat"></i><h2>en</h2>'
       : btn.innerHTML = '<i class="fa-solid fa-repeat"></i><h2>es</h2>';
   });

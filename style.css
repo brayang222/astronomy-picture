@@ -127,7 +127,7 @@ body::before { /* Pseudoelemento para crear el efecto de estrellas */
     margin: 30px 0 0 0;
   }
   input {
-    background-color: #2b2b2b4b;
+    background-color: #44444464;
     font-size: 25px;
     min-height: 40px;
 
