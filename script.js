@@ -19,7 +19,7 @@ fetch(urlNasa)
     document.createElement("h3");
 
   input.type = "date";
-  img.src = data.hdurl;
+  img.src = data.url;
   expli.textContent = data.explanation;
   photoContainer.appendChild(img);
   photoContainer.appendChild(input);
@@ -36,8 +36,7 @@ fetch(urlNasa)
         .then((resp) => resp.json())
         .then((data) => {
           img.src = data.url;
-          expli.textContent =
-            data.explanation;
+          expli.textContent = data.explanation;
         })
         .catch((error) => {
           console.log(
@@ -132,16 +131,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Array con las rutas de las imágenes de galaxias
   const galaxyImages = [
-    "galaxias/galaxia.jpeg",
-    "galaxias/galaxia2.jpeg",
-    "galaxias/galaxia3.jpg",
-    "galaxias/galaxia4.jpeg",
-    "galaxias/galaxia5.jpeg",
-    "galaxias/galaxia6.jpeg",
-    "galaxias/galaxia7.jpeg",
-    "galaxias/galaxia8.jpeg",
-    "galaxias/galaxia4.jpeg",
-    "galaxias/galaxia3.jpg"
+    "galaxias/galaxia.webp",
+    "galaxias/galaxia2.webp",
+    "galaxias/galaxia3.webp",
+    "galaxias/galaxia4.webp",
+    "galaxias/galaxia5.webp",
+    "galaxias/galaxia6.webp",
+    "galaxias/galaxia7.webp",
+    "galaxias/galaxia8.webp",
+    "galaxias/galaxia4.webp",
+    "galaxias/galaxia3.webp"
   ];
 
   const galaxiesContainer = document.getElementById('galaxies');
